@@ -20,8 +20,13 @@ def grid_values(grid):
     return dict(zip(boxes, grid))
 
     """
+    sdkdict = {flat_list[i]: grid_list[i] for i in range(81)}
 
-    return {flat_list[i]: grid_list[i] for i in range(81)}
+    for i,j in sdkdict.items():
+        if j == '.':
+            sdkdict[i] = '123456789'
+
+    return sdkdict
 
 
 display(grid_values('..3.2.6..9..3.5..1..18.64....81.29..7.......8..67.82....26.95..8..2.3..9..5.1.3..'))
